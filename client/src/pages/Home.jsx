@@ -22,6 +22,7 @@ const Home = () => {
   const [searchTimeout, setSearchTimeout] = useState(null);
   const [searchedResults, setSearchedResults] = useState(null);
 
+  useEffect(() => {
   const fetchPosts = async () => {
     setLoading(true);
 
@@ -44,7 +45,6 @@ const Home = () => {
     }
   };
 
-  useEffect(() => {
     fetchPosts();
   }, []);
 
